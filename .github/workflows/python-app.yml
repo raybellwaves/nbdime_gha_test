@@ -32,7 +32,6 @@ jobs:
         pip install nbdime ipython_genutils
     - name: Configure nbdime
       run:
-        which nbdime
         /opt/hostedtoolcache/Python/3.9.13/x64/bin/nbdime config-git --enable --global
     - name: git diff
       run: |
