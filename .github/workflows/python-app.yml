@@ -19,6 +19,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+      run: git checkout HEAD^
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
       with:
@@ -30,4 +33,5 @@ jobs:
         nbdime config-git --enable --global
     - name: git diff
       run: |
-        git diff
+        git log
+        git diff HEAD^ HEAD
