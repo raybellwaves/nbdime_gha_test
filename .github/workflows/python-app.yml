@@ -33,7 +33,7 @@ jobs:
     - name: Configure nbdime
       run:
         which nbdime
-        # nbdime config-git --enable --global
+        nbdime config-git --enable --global
     - name: git diff
       run: |
         git diff HEAD^ HEAD
