@@ -33,5 +33,4 @@ jobs:
         nbdime config-git --enable --global
     - name: git diff
       run: |
-        git log
         git diff HEAD^ HEAD
